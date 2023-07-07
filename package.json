@@ -1,0 +1,37 @@
+{
+	"name": "mowork_web",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"tsx": "vue-tsc",
+		"preview": "vite preview",
+		"update:dep": "ncu -u && yarn",
+		"prettier": "prettier --config prettier.config.cjs --write ./src/**/*.{ts,tsx,vue}"
+	},
+	"dependencies": {
+		"@vueup/vue-quill": "^1.2.0",
+		"axios": "^1.4.0",
+		"dayjs": "^1.11.9",
+		"echarts": "^5.4.2",
+		"pinia": "^2.1.4",
+		"vant": "^4.6.1",
+		"vue": "^3.3.4",
+		"vue-echarts": "^6.6.0",
+		"vue-router": "4"
+	},
+	"devDependencies": {
+		"@types/node": "^20.4.0",
+		"@vitejs/plugin-vue": "^4.2.3",
+		"prettier": "^3.0.0",
+		"sass": "^1.63.6",
+		"typescript": "^5.1.6",
+		"unocss": "^0.53.4",
+		"unplugin-auto-import": "^0.16.6",
+		"unplugin-vue-components": "^0.25.1",
+		"vite": "^4.4.1",
+		"vue-tsc": "^1.8.4"
+	}
+}
