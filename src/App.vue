@@ -9,7 +9,7 @@ import { ConfigProviderThemeVars } from 'vant'
 
 const appStore = useAppStore()
 const themeVars = reactive<ConfigProviderThemeVars>({
-	rateIconFullColor: '#07c160',
+	// rateIconFullColor: '#07c160',
 	sliderBarHeight: '4px',
 	sliderButtonWidth: '20px',
 	sliderButtonHeight: '20px',

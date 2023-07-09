@@ -6,31 +6,26 @@ import { globalConfig } from '@/config'
 export const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
-		name: 'App',
 		meta: { title: globalConfig.appTitle },
 		component: () => import('@/views/index.vue')
 	},
 	{
 		path: '/public',
-		name: 'PublicPage',
 		component: CommonRouterView,
 		redirect: '/public/echarts/bar',
 		children: [
 			{
 				path: 'echarts',
-				name: 'Echarts',
 				component: CommonRouterView,
 				redirect: '/public/echarts/bar',
 				children: [
 					{
 						path: 'bar',
-						name: 'EchartsBar',
 						meta: { title: 'Echart-柱状图' },
 						component: () => import('@/views/public/echarts/bar.vue')
 					},
 					{
 						path: 'map',
-						name: 'EchartsMap',
 						meta: { title: 'Echart-地图' },
 						component: () => import('@/views/public/echarts/map.vue')
 					}
@@ -38,13 +33,23 @@ export const routes: Array<RouteRecordRaw> = [
 			},
 			{
 				path: 'app_version',
-				name: 'AppVersion',
-				meta: { title: 'App版本管理' },
-				component: () => import('@/views/public/app_version/list.vue')
+				component: CommonRouterView,
+				redirect: '/public/app_version/list',
+				children: [
+					{
+						path: 'list',
+						meta: { title: 'App版本管理' },
+						component: () => import('@/views/public/app_version/list.vue')
+					},
+					{
+						path: 'add',
+						meta: { title: '上传App' },
+						component: () => import('@/views/public/app_version/add.vue')
+					}
+				]
 			},
 			{
 				path: 'editor',
-				name: 'Editor',
 				meta: { title: '富文本编辑器' },
 				component: () => import('@/views/public/editor.vue')
 			}

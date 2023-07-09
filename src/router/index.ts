@@ -18,6 +18,15 @@ router.beforeEach((to, from) => {
 
 export default router
 
-export function routerPush(url:string){
-
+export function routerPush(url: string) {
+	if (isEmpty(window['flutter_inappwebview'])) {
+		router.push(url)
+	} else {
+    const href = router.resolve({
+      path: url
+    }).href
+    window.open(href,'_blank');
+    // const skipUrl = window.location.protocol + '//' + window.location.host + '/' + href
+		// window['flutter_inappwebview'].callHandler('flutter_webview_push', skipUrl)
+	}
 }
