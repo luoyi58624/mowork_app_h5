@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { routes } from './routes'
-import { globalConfig } from '@/config'
 
 const router = createRouter({
 	history: createWebHashHistory(),
@@ -22,11 +21,14 @@ export function routerPush(url: string) {
 	if (isEmpty(window['flutter_inappwebview'])) {
 		router.push(url)
 	} else {
-    const href = router.resolve({
-      path: url
-    }).href
-    window.open(href,'_blank');
-    // const skipUrl = window.location.protocol + '//' + window.location.host + '/' + href
+		const routeData = router.resolve({
+			path: url
+		})
+		window.open(routeData.href, '_blank')
+
+		// const skipUrl = window.location.protocol + '//' + window.location.host + '/' + routeData.href
+		// window.open(skipUrl, '_blank')
+		// window.open('https://www.baidu.com', '_blank')
 		// window['flutter_inappwebview'].callHandler('flutter_webview_push', skipUrl)
 	}
 }

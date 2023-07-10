@@ -1,7 +1,9 @@
 <template>
 	<div>
-		<div>token: {{ appStore.flutterApp.token }}</div>
-		<div class="p-2">
+		<van-button @click="flutter.pop()">返回上一级</van-button>
+		<div>token: {{ globalConfig.flutterAppInfo.token }}</div>
+		<div>siteToken: {{ globalConfig.flutterAppInfo.siteToken }}</div>
+		<!-- <div class="p-2">
 			<div v-for="(item, index) in appVersionStore.listData" :key="index" class="relative my-2 p-2 rounded-md bg-white m-elevation-1">
 				<div class="w-full p-2 flex justify-between">
 					<div class="flex items-center">
@@ -25,23 +27,24 @@
 					<div v-for="desc in item.updateDesc" class="text-sm mt-1">{{ desc }}</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </template>
 
 <script setup lang="ts">
-import { renderSize } from '@/commons/utils/commons'
-import { AppVersionModel } from '@/store/app_version'
-
+// import { renderSize } from '@/commons/utils/commons'
+// import { AppVersionModel } from '@/store/app_version'
+import { globalConfig } from '@/commons/config/global'
 const appStore = useAppStore()
-const appVersionStore = useAppVersionStore()
 
-function skipDownloadUrl(model: AppVersionModel) {}
+// const appVersionStore = useAppVersionStore()
 
-function callbackUpdate(model: AppVersionModel) {}
-onMounted(() => {
-	appVersionStore.getAppVersionList()
-})
+// function skipDownloadUrl(model: AppVersionModel) {}
+
+// function callbackUpdate(model: AppVersionModel) {}
+// onMounted(() => {
+// 	appVersionStore.getAppVersionList()
+// })
 </script>
 
 <style scoped lang="scss">

@@ -6,6 +6,8 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const ServerEnv: typeof import('./src/commons/config/global')['ServerEnv']
+  const StorageKey: typeof import('./src/commons/config/global')['StorageKey']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const addZero: typeof import('./src/commons/utils/commons')['addZero']
   const checkCh: typeof import('./src/commons/utils/commons')['checkCh']
@@ -17,6 +19,7 @@ declare global {
   const defineComponent: typeof import('vue')['defineComponent']
   const defineStore: typeof import('pinia')['defineStore']
   const effectScope: typeof import('vue')['effectScope']
+  const flutter: typeof import('./src/commons/utils/flutter')['flutter']
   const formatDate: typeof import('./src/commons/utils/commons')['formatDate']
   const generateLetterArray: typeof import('./src/commons/utils/commons')['generateLetterArray']
   const getActivePinia: typeof import('pinia')['getActivePinia']
@@ -25,6 +28,7 @@ declare global {
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const getDomId: typeof import('./src/commons/utils/commons')['getDomId']
   const getFileSuffix: typeof import('./src/commons/utils/commons')['getFileSuffix']
+  const globalConfig: typeof import('./src/commons/config/global')['globalConfig']
   const h: typeof import('vue')['h']
   const inject: typeof import('vue')['inject']
   const isEmpty: typeof import('./src/commons/utils/commons')['isEmpty']

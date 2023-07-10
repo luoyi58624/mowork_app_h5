@@ -20,4 +20,12 @@ import 'vant/es/notify/style'
 import 'vant/es/image-preview/style'
 
 const app = createApp(App)
+app.config.globalProperties.flutter = flutter 
+app.config.globalProperties.globalConfig = globalConfig 
 app.use(createPinia()).use(router).mount('#app')
+
+if (!isEmpty(window['flutter_inappwebview'])) {
+	window['flutter_inappwebview'].callHandler('get_flutter_app_info').then(res => {
+		globalConfig.flutterAppInfo = res
+	})
+}

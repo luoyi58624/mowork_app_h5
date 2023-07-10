@@ -1,4 +1,4 @@
-import { globalConfig } from '@/config'
+import { globalConfig } from '@/global'
 import axios from 'axios'
 import { defineStore } from 'pinia'
 

@@ -16,7 +16,6 @@ const themeVars = reactive<ConfigProviderThemeVars>({
 	buttonPrimaryBackground: '#0078d4',
 	buttonPrimaryBorderColor: '#0078d4'
 })
-
 appStore.initApp()
 </script>
 

@@ -20,7 +20,7 @@ export default defineConfig({
 		}),
 		AutoImport({
 			imports: ['vue', 'pinia'],
-			dirs: ['./src/store', './src/commons/utils'],
+			dirs: ['./src/store', './src/commons'],
 			dts: true
 		}),
 		Components({

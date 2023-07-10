@@ -1,7 +1,6 @@
 import { RouteRecordRaw } from 'vue-router'
 import NotFound from '@/commons/pages/NotFound.vue'
 import CommonRouterView from '@/commons/pages/CommonRouterView.vue'
-import { globalConfig } from '@/config'
 
 export const routes: Array<RouteRecordRaw> = [
 	{
