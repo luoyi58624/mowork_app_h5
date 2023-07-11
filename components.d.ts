@@ -15,5 +15,7 @@ declare module 'vue' {
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanField: typeof import('vant/es')['Field']
     VanForm: typeof import('vant/es')['Form']
+    VanStepper: typeof import('vant/es')['Stepper']
+    VanUploader: typeof import('vant/es')['Uploader']
   }
 }

@@ -1,13 +1,10 @@
 <template>
 	<div>
-		<van-button @click="flutter.pop()">返回上一级</van-button>
-		<div>token: {{ globalConfig.flutterAppInfo.token }}</div>
-		<div>siteToken: {{ globalConfig.flutterAppInfo.siteToken }}</div>
-		<!-- <div class="p-2">
+		<div class="p-2">
 			<div v-for="(item, index) in appVersionStore.listData" :key="index" class="relative my-2 p-2 rounded-md bg-white m-elevation-1">
 				<div class="w-full p-2 flex justify-between">
 					<div class="flex items-center">
-						<image style="width: 72px; height: 36px" src="/static/images/logo.png" />
+						<img style="width: 72px; height: 36px" src="/image/logo.png" />
 						<div class="ml-1">
 							<div class="flex items-center">
 								<span class="text-sm font-bold">MoWork</span>
@@ -27,24 +24,22 @@
 					<div v-for="desc in item.updateDesc" class="text-sm mt-1">{{ desc }}</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-// import { renderSize } from '@/commons/utils/commons'
-// import { AppVersionModel } from '@/store/app_version'
-import { globalConfig } from '@/commons/config/global'
-const appStore = useAppStore()
+import { renderSize } from '@/commons/utils/commons'
+import { AppVersionModel } from '@/store/app_version'
 
-// const appVersionStore = useAppVersionStore()
+const appVersionStore = useAppVersionStore()
 
-// function skipDownloadUrl(model: AppVersionModel) {}
+function skipDownloadUrl(model: AppVersionModel) {}
 
-// function callbackUpdate(model: AppVersionModel) {}
-// onMounted(() => {
-// 	appVersionStore.getAppVersionList()
-// })
+function callbackUpdate(model: AppVersionModel) {}
+onMounted(() => {
+	appVersionStore.getAppVersionList()
+})
 </script>
 
 <style scoped lang="scss">

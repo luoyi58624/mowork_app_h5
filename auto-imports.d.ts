@@ -20,6 +20,7 @@ declare global {
   const defineStore: typeof import('pinia')['defineStore']
   const effectScope: typeof import('vue')['effectScope']
   const flutter: typeof import('./src/commons/utils/flutter')['flutter']
+  const formRules: typeof import('./src/commons/utils/form')['formRules']
   const formatDate: typeof import('./src/commons/utils/commons')['formatDate']
   const generateLetterArray: typeof import('./src/commons/utils/commons')['generateLetterArray']
   const getActivePinia: typeof import('pinia')['getActivePinia']

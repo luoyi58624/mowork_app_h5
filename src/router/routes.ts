@@ -9,48 +9,52 @@ export const routes: Array<RouteRecordRaw> = [
 		component: () => import('@/views/index.vue')
 	},
 	{
-		path: '/public',
+		path: '/h5',
 		component: CommonRouterView,
-		redirect: '/public/echarts/bar',
 		children: [
 			{
-				path: 'echarts',
-				component: CommonRouterView,
-				redirect: '/public/echarts/bar',
-				children: [
-					{
-						path: 'bar',
-						meta: { title: 'Echart-柱状图' },
-						component: () => import('@/views/public/echarts/bar.vue')
-					},
-					{
-						path: 'map',
-						meta: { title: 'Echart-地图' },
-						component: () => import('@/views/public/echarts/map.vue')
-					}
-				]
+				path: '',
+				meta: { title: 'Mowork-H5' },
+				component: () => import('@/views/h5/index.vue')
 			},
 			{
 				path: 'app_version',
 				component: CommonRouterView,
-				redirect: '/public/app_version/list',
+				redirect: '/h5/app_version/list',
 				children: [
 					{
 						path: 'list',
-						meta: { title: 'App版本管理' },
-						component: () => import('@/views/public/app_version/list.vue')
+						meta: { title: 'App版本列表' },
+						component: () => import('@/views/h5/app_version/list.vue')
 					},
 					{
 						path: 'add',
 						meta: { title: '上传App' },
-						component: () => import('@/views/public/app_version/add.vue')
+						component: () => import('@/views/h5/app_version/add.vue')
+					}
+				]
+			},
+			{
+				path: 'echarts',
+				component: CommonRouterView,
+				redirect: '/h5/echarts/bar',
+				children: [
+					{
+						path: 'bar',
+						meta: { title: 'Echart-柱状图' },
+						component: () => import('@/views/h5/echarts/bar.vue')
+					},
+					{
+						path: 'map',
+						meta: { title: 'Echart-地图' },
+						component: () => import('@/views/h5/echarts/map.vue')
 					}
 				]
 			},
 			{
 				path: 'editor',
 				meta: { title: '富文本编辑器' },
-				component: () => import('@/views/public/editor.vue')
+				component: () => import('@/views/h5/editor/index.vue')
 			}
 		]
 	},

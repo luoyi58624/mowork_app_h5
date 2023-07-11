@@ -22,6 +22,7 @@ import 'vant/es/image-preview/style'
 const app = createApp(App)
 app.config.globalProperties.flutter = flutter 
 app.config.globalProperties.globalConfig = globalConfig 
+app.config.globalProperties.formRules = formRules 
 app.use(createPinia()).use(router).mount('#app')
 
 if (!isEmpty(window['flutter_inappwebview'])) {

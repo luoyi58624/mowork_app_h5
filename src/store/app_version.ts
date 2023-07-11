@@ -1,4 +1,3 @@
-import { globalConfig } from '@/global'
 import axios from 'axios'
 import { defineStore } from 'pinia'
 
@@ -20,7 +19,7 @@ export const useAppVersionStore = defineStore('app_version', {
 		getAppVersionList(){
 			axios.get(globalConfig.moworkH5Server+'/app-version').then(res=>{
 				console.log(res);
-				
+				this.listData = res.data.data
 			})
 		}
 	}

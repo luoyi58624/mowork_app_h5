@@ -25,10 +25,5 @@ export function routerPush(url: string) {
 			path: url
 		})
 		window.open(routeData.href, '_blank')
-
-		// const skipUrl = window.location.protocol + '//' + window.location.host + '/' + routeData.href
-		// window.open(skipUrl, '_blank')
-		// window.open('https://www.baidu.com', '_blank')
-		// window['flutter_inappwebview'].callHandler('flutter_webview_push', skipUrl)
 	}
 }
