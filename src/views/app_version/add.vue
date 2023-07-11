@@ -47,8 +47,8 @@ const onSubmit = values => {
 	console.log('submit', values)
 	formLoading.value = true
 	const data = new FormData()
-	console.log(formData.file[0].file);
-	
+	console.log(formData.file[0].file)
+
 	data.set('file', formData.file[0].file)
 	data.set('versionName', formData.versionName)
 	data.set('versionNum', formData.versionNum.toString())
